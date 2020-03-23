@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
@@ -20,16 +22,16 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     
-    @IBOutlet weak var errorTextField: UIStackView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        FirebaseApp.configure()
     }
     
     //validate if everything correct
-    func validateFields() -> String{
+    func validateFields() -> String? {
         
         //check all fields filled in
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -41,7 +43,7 @@ class SignUpViewController: UIViewController {
             return "Make sure pass is 8 chars, contains a special char, and a number"
         }
         
-        return "Error"
+        return nil
     }
     
 
@@ -50,11 +52,49 @@ class SignUpViewController: UIViewController {
         //validate fields
         let error = validateFields()
         
+        if error != nil {
+            showError(msg: error!)
+        }
         //create user
+        let firstname = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pass = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        
+        Auth.auth().createUser(withEmail: email, password: pass) { (authResult, err) in
+          // ...
+            if err != nil {
+                self.showError(msg: "Error creating user")
+            }else {
+                
+                let db = Firestore.firestore()
+                
+                db.collection("users").addDocument(data: ["firstName": firstname, "lastName": lastname, "uid": authResult!.user.uid  ]) { (errorz) in
+                    
+                    if errorz != nil {
+                        self.showError(msg: "Something went wrong")
+                    }
+                }
+                self.pushToHome()
+                
+            }
+        }
         
         //push to home
+    }
+    
+    func showError(msg: String) {
+        errorLabel.text = msg
+        errorLabel.alpha = 1
+    }
+    
+    func pushToHome() {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+        
     }
     
 

@@ -82,7 +82,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="46o-ac-EnD">
             <objects>
-                <viewController id="12i-Zv-UdO" customClass="SignUpViewController" customModule="Papr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupViewController" id="12i-Zv-UdO" customClass="SignUpViewController" customModule="Papr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lo1-Hs-aKV" userLabel="Signup">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
                     <navigationItem key="navigationItem" id="Uik-A6-4D8"/>
                     <connections>
                         <outlet property="emailTextField" destination="Gn1-Ty-DuX" id="7Ve-HO-2kl"/>
-                        <outlet property="errorTextField" destination="6ei-5a-1S4" id="P1a-Pi-Pi1"/>
+                        <outlet property="errorLabel" destination="iA5-69-H6a" id="yVL-hT-5Y2"/>
                         <outlet property="firstNameTextField" destination="Bdb-4U-tOE" id="Mv0-Cz-oSq"/>
                         <outlet property="lastNameTextField" destination="X3m-eX-1a1" id="2hP-En-FKx"/>
                         <outlet property="passwordTextField" destination="DrO-CV-kRn" id="AL0-rq-96t"/>
@@ -175,12 +175,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rt-9x-fSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060.8695652173915" y="-103.125"/>
+            <point key="canvasLocation" x="1897" y="-94"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="1G7-W0-2qB">
             <objects>
-                <viewController id="xUn-AW-V1I" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="xUn-AW-V1I" customClass="HomeViewController" customModule="Papr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OTr-DN-ItU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
