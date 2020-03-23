@@ -137,11 +137,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper_roll-512" translatesAutoresizingMaskIntoConstraints="NO" id="9IM-Vv-bVv">
+                                <rect key="frame" x="224" y="687" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="p1O-jx-swU"/>
+                                    <constraint firstAttribute="height" constant="150" id="yod-po-JJ6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Drn-0Y-vbz" secondAttribute="bottom" id="4CM-5y-Ma8"/>
                             <constraint firstAttribute="trailing" secondItem="Drn-0Y-vbz" secondAttribute="trailing" id="5Lf-YE-Ip6"/>
+                            <constraint firstItem="TDP-cG-IW5" firstAttribute="trailing" secondItem="9IM-Vv-bVv" secondAttribute="trailing" constant="40" id="8cr-Vd-ilR"/>
                             <constraint firstItem="6ei-5a-1S4" firstAttribute="centerX" secondItem="Lo1-Hs-aKV" secondAttribute="centerX" id="BxJ-Wk-2j3"/>
                             <constraint firstItem="TDP-cG-IW5" firstAttribute="trailing" secondItem="6ei-5a-1S4" secondAttribute="trailing" constant="40" id="DDm-IC-njo"/>
                             <constraint firstItem="Drn-0Y-vbz" firstAttribute="top" secondItem="Lo1-Hs-aKV" secondAttribute="top" id="MeO-Gz-grb"/>
@@ -150,6 +158,7 @@
                             <constraint firstItem="Drn-0Y-vbz" firstAttribute="leading" secondItem="Lo1-Hs-aKV" secondAttribute="leading" id="Xua-1g-Xbn"/>
                             <constraint firstItem="VHa-Mk-jS3" firstAttribute="centerX" secondItem="Lo1-Hs-aKV" secondAttribute="centerX" id="Ypr-7a-JLH"/>
                             <constraint firstItem="6ei-5a-1S4" firstAttribute="centerY" secondItem="Lo1-Hs-aKV" secondAttribute="centerY" id="e4t-B0-uvl"/>
+                            <constraint firstItem="TDP-cG-IW5" firstAttribute="bottom" secondItem="9IM-Vv-bVv" secondAttribute="bottom" constant="25" id="eB7-no-HS1"/>
                             <constraint firstItem="6ei-5a-1S4" firstAttribute="leading" secondItem="TDP-cG-IW5" secondAttribute="leading" constant="40" id="kB7-gq-wrr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDP-cG-IW5"/>
@@ -235,10 +244,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper_roll-512" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-Be-ez3">
+                                <rect key="frame" x="224" y="687" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="I9a-m8-473"/>
+                                    <constraint firstAttribute="width" constant="150" id="qLw-Sl-ZWK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ldU-0R-AXy" firstAttribute="centerX" secondItem="PgY-lC-e9P" secondAttribute="centerX" id="6fY-VP-tLn"/>
+                            <constraint firstItem="Jkj-74-rMr" firstAttribute="trailing" secondItem="bcQ-Be-ez3" secondAttribute="trailing" constant="40" id="9ri-Nm-geV"/>
                             <constraint firstItem="uLn-Ap-UkA" firstAttribute="top" secondItem="PgY-lC-e9P" secondAttribute="top" id="C8R-CJ-4LV"/>
                             <constraint firstItem="ldU-0R-AXy" firstAttribute="centerY" secondItem="PgY-lC-e9P" secondAttribute="centerY" constant="-275" id="ERm-tq-vAy"/>
                             <constraint firstItem="uLn-Ap-UkA" firstAttribute="leading" secondItem="PgY-lC-e9P" secondAttribute="leading" id="HAa-20-4vW"/>
@@ -246,6 +263,7 @@
                             <constraint firstItem="VXf-bL-6BK" firstAttribute="centerX" secondItem="PgY-lC-e9P" secondAttribute="centerX" id="WSo-uh-J71"/>
                             <constraint firstItem="VXf-bL-6BK" firstAttribute="leading" secondItem="Jkj-74-rMr" secondAttribute="leading" constant="40" id="Ygz-X2-Vbm"/>
                             <constraint firstItem="VXf-bL-6BK" firstAttribute="top" secondItem="ldU-0R-AXy" secondAttribute="bottom" constant="178.5" id="gte-r9-ZPa"/>
+                            <constraint firstItem="Jkj-74-rMr" firstAttribute="bottom" secondItem="bcQ-Be-ez3" secondAttribute="bottom" constant="25" id="j9Q-0r-tUY"/>
                             <constraint firstAttribute="trailing" secondItem="uLn-Ap-UkA" secondAttribute="trailing" id="kpl-en-12H"/>
                             <constraint firstItem="Jkj-74-rMr" firstAttribute="trailing" secondItem="VXf-bL-6BK" secondAttribute="trailing" constant="40" id="q1O-Lh-LkE"/>
                             <constraint firstItem="VXf-bL-6BK" firstAttribute="centerY" secondItem="PgY-lC-e9P" secondAttribute="centerY" id="tif-fJ-aDz"/>
