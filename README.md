@@ -5,4 +5,4 @@ Papr is the iOS mobile app that tells you which stores near you are selling toil
 
 This project is currently a work in progress. 
 
-<img src="Papr/ScreenShots/Home.png" height="300">
+<img src="Papr/ScreenShots/Home.png" height="300"> <img src="Papr/ScreenShots/Signup.png" height="300"> <img src="Papr/ScreenShots/Login.png" height="300">
