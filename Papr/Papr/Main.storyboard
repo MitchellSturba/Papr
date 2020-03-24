@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Papr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstView" id="BYZ-38-t0r" customClass="ViewController" customModule="Papr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,10 +123,10 @@
                                             <action selector="signUpTapped:" destination="12i-Zv-UdO" eventType="touchUpInside" id="u5m-r5-QNk"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iA5-69-H6a">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iA5-69-H6a">
                                         <rect key="frame" x="0.0" y="274" width="334" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
-                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -144,6 +144,18 @@
                                     <constraint firstAttribute="height" constant="150" id="yod-po-JJ6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jog-Gf-GAs">
+                                <rect key="frame" x="20" y="44.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h5W-JP-ZRu"/>
+                                    <constraint firstAttribute="width" constant="40" id="joD-VS-0Id"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.left.circle" catalog="system"/>
+                                <connections>
+                                    <segue destination="V1t-72-fbt" kind="unwind" unwindAction="unwindToFirstScreen:" id="Ohl-7m-gLf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -157,9 +169,11 @@
                             <constraint firstItem="6ei-5a-1S4" firstAttribute="top" secondItem="VHa-Mk-jS3" secondAttribute="bottom" constant="97.5" id="Unv-lW-hqM"/>
                             <constraint firstItem="Drn-0Y-vbz" firstAttribute="leading" secondItem="Lo1-Hs-aKV" secondAttribute="leading" id="Xua-1g-Xbn"/>
                             <constraint firstItem="VHa-Mk-jS3" firstAttribute="centerX" secondItem="Lo1-Hs-aKV" secondAttribute="centerX" id="Ypr-7a-JLH"/>
+                            <constraint firstItem="jog-Gf-GAs" firstAttribute="leading" secondItem="TDP-cG-IW5" secondAttribute="leading" constant="20" id="bcz-VZ-QVL"/>
                             <constraint firstItem="6ei-5a-1S4" firstAttribute="centerY" secondItem="Lo1-Hs-aKV" secondAttribute="centerY" id="e4t-B0-uvl"/>
                             <constraint firstItem="TDP-cG-IW5" firstAttribute="bottom" secondItem="9IM-Vv-bVv" secondAttribute="bottom" constant="25" id="eB7-no-HS1"/>
                             <constraint firstItem="6ei-5a-1S4" firstAttribute="leading" secondItem="TDP-cG-IW5" secondAttribute="leading" constant="40" id="kB7-gq-wrr"/>
+                            <constraint firstItem="jog-Gf-GAs" firstAttribute="top" secondItem="TDP-cG-IW5" secondAttribute="top" id="vMB-oB-fz5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDP-cG-IW5"/>
                     </view>
@@ -174,6 +188,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rt-9x-fSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="V1t-72-fbt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1897" y="-94"/>
         </scene>
@@ -220,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VXf-bL-6BK">
-                                <rect key="frame" x="40" y="359" width="334" height="178.5"/>
+                                <rect key="frame" x="40" y="347.5" width="334" height="201.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-m3-BLC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -233,16 +248,17 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-if-KKu">
-                                        <rect key="frame" x="0.0" y="108" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="108" width="334" height="48"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="35"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="NbZ-yy-9mF" eventType="touchUpInside" id="hsy-yo-4Ck"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR9-VW-bLe">
-                                        <rect key="frame" x="0.0" y="158" width="334" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR9-VW-bLe">
+                                        <rect key="frame" x="0.0" y="176" width="334" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -260,6 +276,15 @@
                                     <constraint firstAttribute="width" constant="150" id="qLw-Sl-ZWK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-Gj-J2a">
+                                <rect key="frame" x="40" y="44.5" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.left.circle" catalog="system"/>
+                                <connections>
+                                    <segue destination="Se0-kd-oiv" kind="unwind" unwindAction="unwindToFirstScreen:" id="HhF-aZ-w0g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -286,8 +311,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krz-d7-Dwk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Se0-kd-oiv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1896" y="647"/>
+            <point key="canvasLocation" x="1895.6521739130437" y="646.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0FB-4H-OMF">
@@ -310,12 +336,19 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2bN-mo-wgo">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" backgroundImage="chevron.left.circle" catalog="system"/>
+                </button>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background-1" width="414" height="896"/>
+        <image name="chevron.left.circle" catalog="system" width="64" height="60"/>
         <image name="paper_roll-512" width="512" height="512"/>
     </resources>
 </document>
