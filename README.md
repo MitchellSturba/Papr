@@ -10,7 +10,7 @@ Papr is the iOS mobile app that tells you which stores near you are selling toil
 <img src="Papr/ScreenShots/Home.png" height="300"> <img src="Papr/ScreenShots/Signup.png" height="300"> <img src="Papr/ScreenShots/Login.png" height="300">
 
 <h2>User Account Authorization</h2>
-The user accounts are store in a Google Firebase database.  When the user fills in all the text fields in the signup-page, the fields are test to ensure they are correctly filled our and formated, and the password is tested to ensure it is at least eight characters, contains at least one number, and at least one special character.  The follow code is then executed in ored to add the user to the Firestore database.
+The user accounts are store in a Google Firebase database.  When the user fills in all the text fields in the signup-page, the fields are test to ensure they are correctly filled our and formated, and the password is tested to ensure it is at least eight characters, contains at least one number, and at least one special character.  The follow code is then executed in order to add the user to the Firestore database.
 <br>
 
 ```
