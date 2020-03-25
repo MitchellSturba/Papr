@@ -26,4 +26,4 @@ Auth.auth().createUser(withEmail: email, password: pass) { (authResult, err) in
           self.pushToHome()
      }
 }
-        ```
+```
