@@ -22,8 +22,9 @@ Auth.auth().createUser(withEmail: email, password: pass) { (authResult, err) in
           db.collection("users").addDocument(data: ["firstName": firstname, "lastName": lastname, "uid": authResult!.user.uid  ]) { (errorz) in
           if errorz != nil {
                 self.showError(msg: "Something went wrong")}
+          }else{
+                self.pushToHome()
           }
-          self.pushToHome()
      }
 }
 ```
