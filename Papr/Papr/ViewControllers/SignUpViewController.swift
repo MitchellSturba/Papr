@@ -61,25 +61,17 @@ class SignUpViewController: UIViewController {
         let pass = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         Auth.auth().createUser(withEmail: email, password: pass) { (authResult, err) in
-          // ...
-            if err != nil {
-                self.showError(msg: "Error creating user")
-            }else {
-                
+            if err != nil {self.showError(msg: "Error creating user")}
+            else {
                 let db = Firestore.firestore()
-                
                 db.collection("users").addDocument(data: ["firstName": firstname, "lastName": lastname, "uid": authResult!.user.uid  ]) { (errorz) in
-                    
                     if errorz != nil {
                         self.showError(msg: "Something went wrong")
                     }
                 }
                 self.pushToHome()
-                
             }
         }
-        
-        //push to home
     }
     
     func showError(msg: String) {

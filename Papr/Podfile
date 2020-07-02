@@ -9,5 +9,6 @@ target 'Papr' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'GoogleMaps'
 
 end

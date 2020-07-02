@@ -204,24 +204,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i90-oL-GwU">
-                                <rect key="frame" x="120.5" y="420.5" width="173.5" height="55"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Papr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9Z-TP-HZx">
+                                <rect key="frame" x="171" y="145" width="72" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paper_roll-512" translatesAutoresizingMaskIntoConstraints="NO" id="9Hy-TK-5AL">
+                                <rect key="frame" x="167" y="57" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="i90-oL-GwU" firstAttribute="centerY" secondItem="OTr-DN-ItU" secondAttribute="centerY" id="Eub-ak-baV"/>
-                            <constraint firstItem="i90-oL-GwU" firstAttribute="centerX" secondItem="OTr-DN-ItU" secondAttribute="centerX" id="uk2-ON-oYh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EZV-ue-nO9"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFL-Jx-4RQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2975" y="102"/>
+            <point key="canvasLocation" x="2973.913043478261" y="101.78571428571428"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ts8-7b-MB8">
@@ -235,7 +236,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VXf-bL-6BK">
-                                <rect key="frame" x="40" y="347.5" width="334" height="201.5"/>
+                                <rect key="frame" x="40" y="353" width="334" height="190.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-m3-BLC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -248,15 +249,17 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-if-KKu">
-                                        <rect key="frame" x="0.0" y="108" width="334" height="48"/>
-                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="35"/>
-                                        <state key="normal" title="Login"/>
+                                        <rect key="frame" x="0.0" y="108" width="334" height="37"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                        <state key="normal" title="Enter">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="NbZ-yy-9mF" eventType="touchUpInside" id="hsy-yo-4Ck"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR9-VW-bLe">
-                                        <rect key="frame" x="0.0" y="176" width="334" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="165" width="334" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
