@@ -117,7 +117,7 @@
                                         <rect key="frame" x="0.0" y="216" width="334" height="38"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                         <state key="normal" title="SignUp">
-                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="signUpTapped:" destination="12i-Zv-UdO" eventType="touchUpInside" id="u5m-r5-QNk"/>
@@ -252,7 +252,7 @@
                                         <rect key="frame" x="0.0" y="108" width="334" height="37"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                         <state key="normal" title="Enter">
-                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.96498763570000001" blue="0.98416024410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="NbZ-yy-9mF" eventType="touchUpInside" id="hsy-yo-4Ck"/>

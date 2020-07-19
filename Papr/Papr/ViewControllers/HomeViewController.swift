@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 class HomeViewController: UIViewController {
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        findButton.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
+    
+        
+        GMSServices.provideAPIKey("AIzaSyD2WE9hGBy3VMWh6RNDFPK_3yoCnJMUBWo")
+        GMSPlacesClient.provideAPIKey("AIzaSyD2WE9hGBy3VMWh6RNDFPK_3yoCnJMUBWo")
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 42.3149, longitude: -83.0364, zoom: 10)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        
+        let curLocation = CLLocationCoordinate2DMake(42.3149, -83.0364)
+        let marker = GMSMarker(position: curLocation)
+        marker.title = "Windsor"
+        marker.map = mapView
     }
     
 
@@ -27,5 +40,4 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
