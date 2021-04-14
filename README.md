@@ -1,5 +1,5 @@
-# Papr
-<img src="Papr/Papr/Assets.xcassets/AppIcon.appiconset/Paprborder1.png" width="125" height="125">
+<h1> <img align="center" src="Papr/Papr/Assets.xcassets/AppIcon.appiconset/Paprborder1.png" width="50" height="50"> Papr </h1>
+
 <h2>Overview</h2>
 
 Papr is a WIP iOS mobile app that tells you which stores near you are selling toilet paper during a time of crisis. The application was made in Swift and works with Google Firebase to allow the user to signup and login to their account using their email and password.  It connects with the Google Maps third party API to locate stores near you where you can buy supplies for an upcoming self isolation/quarentine event.  After making an account and allowing the app to access your location, the closest stores will be shown to the user.
